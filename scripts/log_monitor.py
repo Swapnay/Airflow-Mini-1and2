@@ -1,5 +1,6 @@
 import os
-basepath = '/Users/syeruvala//airflow/logs/marketvol'
+# on docker dipending upon number of worker nodes logs will be at http://a1d1c26c57a0:8793/log/marketvol/
+basepath = '~/airflow/logs/marketvol'
 files = []
 from pathlib import Path
 

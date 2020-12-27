@@ -54,7 +54,7 @@ load_hdfs_AAPL = BashOperator(
     task_id='load_AAPL_hdfs',
     bash_command='cp {{ var.value.data_loc }}{{ ds }}/AAPL.csv {{var.value.data_to_loc}}/{{ ds }}AAPL.csv',
     dag=dag)
-
+# originally on local HDFS dfs -copyFromLocal {{ var.value.data_loc }}{{ ds }}/AAPL.csv /data/{{ ds }}AAPL.csv used.
 load_hdfs_TSLA = BashOperator(
     task_id='load_TSLA_hdfs',
     bash_command='cp {{var.value.data_loc}}{{ ds }}/TSLA.csv {{var.value.data_to_loc}}/{{ ds }}TSLA.csv',
